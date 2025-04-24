@@ -83,7 +83,7 @@ export function ProfileDropdown() {
           onClick={() => handleSectionClick('theme-mode')}
         >
           <SunMoon className="mr-2 h-4 w-4 text-primary" />
-          <span>{t('settings.themeMode') || 'Theme Mode'}</span>
+          <span>{t('settings.themeMode')}</span>
         </div>
         
         {activeSection === 'theme-mode' && (
