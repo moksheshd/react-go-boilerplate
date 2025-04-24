@@ -1,0 +1,49 @@
+
+{
+  "auth": {
+    "welcome": "स्वागत है",
+    "login": "लॉग इन",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "signIn": "साइन इन करें",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "rememberMe": "मुझे याद रखें"
+  },
+  "dashboard": {
+    "welcome": "अपने डैशबोर्ड में आपका स्वागत है",
+    "titlePrefix": "डैशबोर्ड",
+    "profile": "प्रोफाइल देखें",
+    "settings": "सेटिंग्स",
+    "logout": "लॉग आउट"
+  },
+  "header": {
+    "search": "खोज..."
+  },
+  "sidebar": {
+    "dashboard": "डैशबोर्ड",
+    "analytics": "एनालिटिक्स",
+    "profile": "प्रोफाइल",
+    "settings": "सेटिंग्स"
+  },
+  "settings": {
+    "appearance": "दिखावट",
+    "language": "भाषा",
+    "theme": "थीम",
+    "notifications": "सूचनाएं",
+    "darkMode": "डार्क मोड",
+    "lightMode": "लाइट मोड",
+    "colorTheme": "रंग थीम"
+  },
+  "common": {
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "loading": "लोड हो रहा है...",
+    "error": "एक त्रुटि हुई"
+  },
+  "languages": {
+    "english": "अंग्रेज़ी",
+    "hindi": "हिन्दी"
+  }
+}

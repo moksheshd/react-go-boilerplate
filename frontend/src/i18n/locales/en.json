@@ -1,0 +1,49 @@
+
+{
+  "auth": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me"
+  },
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "titlePrefix": "Dashboard",
+    "profile": "View Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "header": {
+    "search": "Search..."
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "analytics": "Analytics",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "settings": {
+    "appearance": "Appearance",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "colorTheme": "Color Theme"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred"
+  },
+  "languages": {
+    "english": "English",
+    "hindi": "Hindi"
+  }
+}
