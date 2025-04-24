@@ -1,0 +1,40 @@
+Frontend
+- Use shadcn
+- Use the Slate color
+- Use dark mode
+- create a beautiful pages! This evokes clean, modern designs with a focus on simplicity and user experience. We can draw inspiration from login pages used by apps like Notion, Slack, or Linear that feature minimalist designs with subtle animations and clear visual hierarchy.
+
+---------------------------------------------------------------------------------------------------------------
+Backend
+- 
+
+---------------------------------------------------------------------------------------------------------------
+Commit message:
+- Format
+```
+<type>: <short summary>
+
+<body>
+```
+Types
+
+feat: A new feature
+fix: A bug fix
+docs: Documentation changes
+style: Changes that don't affect code functionality (formatting, missing semi-colons, etc.)
+refactor: Code changes that neither fix bugs nor add features
+perf: Performance improvements
+test: Adding or correcting tests
+chore: Changes to build process, tooling, dependencies, etc.
+
+example
+feat: Implement OAuth2 authentication
+
+Add support for OAuth2 authentication with Google and Facebook providers.
+This allows users to log in using their social accounts.
+---------------------------------------------------------------------------------------------------------------
+Credentials
+username: user01
+password: test01
+---------------------------------------------------------------------------------------------------------------
+NOTE: No needd to run the dev server again and again
