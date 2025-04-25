@@ -2,7 +2,7 @@
 import React from 'react';
 import { MenuIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ProfileDropdown } from '@/components/ui/ProfileDropdown';
+import { ProfileDropdown } from '@/components/custom/ProfileDropdown';
 import { useSidebar } from '@/components/ui/sidebar';
 import { useTranslation } from 'react-i18next';
 

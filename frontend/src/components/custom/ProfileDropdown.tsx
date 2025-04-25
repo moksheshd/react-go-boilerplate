@@ -16,10 +16,10 @@ import {
   DropdownMenuTrigger,
   DropdownMenuLabel
 } from '@/components/ui/dropdown-menu';
-import { UserAvatar } from '@/components/ui/UserAvatar';
-import { ModeToggle } from '@/components/ui/ModeToggle';
-import { ThemeSelector } from '@/components/ui/ThemeSelector';
-import { LanguageSelector } from '@/components/ui/LanguageSelector';
+import { UserAvatar } from '@/components/custom/UserAvatar';
+import { ModeToggle } from '@/components/custom/ModeToggle';
+import { ThemeSelector } from '@/components/custom/ThemeSelector';
+import { LanguageSelector } from '@/components/custom/LanguageSelector';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/contexts/ThemeContext';
 

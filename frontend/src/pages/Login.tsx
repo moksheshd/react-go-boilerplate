@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { LanguageSelector } from '@/components/ui/LanguageSelector';
-import { ModeToggle } from '@/components/ui/ModeToggle';
-import { ThemeSelector } from '@/components/ui/ThemeSelector';
+import { LanguageSelector } from '@/components/custom/LanguageSelector';
+import { ModeToggle } from '@/components/custom/ModeToggle';
+import { ThemeSelector } from '@/components/custom/ThemeSelector';
 
 export default function Login() {
   const [email, setEmail] = useState('');

@@ -1,6 +1,6 @@
 # Frontend Architecture Documentation
 
-This document provides a comprehensive overview of the frontend architecture for the ICAI-UDIN application.
+This document provides a comprehensive overview of the frontend architecture for the React & Go Boilerplate application.
 
 ## Table of Contents
 
@@ -40,6 +40,7 @@ frontend/
 ├── public/               # Static assets
 ├── src/
 │   ├── components/       # UI components
+│   │   ├── custom/       # Custom application-specific components
 │   │   ├── layout/       # Layout components
 │   │   └── ui/           # shadcn UI components
 │   ├── contexts/         # React context providers
@@ -356,6 +357,8 @@ The application uses shadcn/ui components, which are built on top of Radix UI pr
 - **Toast**: Notification system
 
 ### Custom Components
+
+The application includes custom components located in the `src/components/custom/` directory:
 
 - **LanguageSelector**: Language selection dropdown
 - **ModeToggle**: Light/dark mode toggle

@@ -2,7 +2,8 @@ Frontend
 - Use shadcn
 - Use the Slate color
 - Use dark mode
-- create a beautiful pages! This evokes clean, modern designs with a focus on simplicity and user experience. We can draw inspiration from login pages used by apps like Notion, Slack, or Linear that feature minimalist designs with subtle animations and clear visual hierarchy.
+- Create all custom components in the frontend/src/components/custom directory
+- Create beautiful pages! This evokes clean, modern designs with a focus on simplicity and user experience. We can draw inspiration from login pages used by apps like Notion, Slack, or Linear that feature minimalist designs with subtle animations and clear visual hierarchy.
 
 ---------------------------------------------------------------------------------------------------------------
 Backend

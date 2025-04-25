@@ -1,6 +1,6 @@
-# ICAI-UDIN Frontend Documentation
+# React & Go Boilerplate Frontend Documentation
 
-Welcome to the ICAI-UDIN frontend documentation. This repository contains a comprehensive set of documents to help you understand and work with the frontend codebase.
+Welcome to the React & Go Boilerplate frontend documentation. This repository contains a comprehensive set of documents to help you understand and work with the frontend codebase.
 
 ## Documentation Index
 
@@ -45,7 +45,7 @@ This will start the development server at http://localhost:8080.
 
 ## Project Overview
 
-The ICAI-UDIN frontend is a modern React application built with TypeScript, Vite, and shadcn/ui components. It follows a component-based architecture with context-based state management. The application supports multiple themes, dark/light modes, and internationalization.
+The React & Go Boilerplate frontend is a modern React application built with TypeScript, Vite, and shadcn/ui components. It follows a component-based architecture with context-based state management. The application supports multiple themes, dark/light modes, and internationalization.
 
 ### Key Features
 
@@ -77,6 +77,7 @@ frontend/
 ├── public/               # Static assets
 ├── src/
 │   ├── components/       # UI components
+│   │   ├── custom/       # Custom application-specific components
 │   │   ├── layout/       # Layout components
 │   │   └── ui/           # shadcn UI components
 │   ├── contexts/         # React context providers
