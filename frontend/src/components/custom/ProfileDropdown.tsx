@@ -6,7 +6,9 @@ import {
   LogOut, 
   Languages, 
   SunMoon,
-  Palette
+  Palette,
+  Settings,
+  ChevronRight
 } from 'lucide-react';
 import { 
   DropdownMenu, 
@@ -14,7 +16,10 @@ import {
   DropdownMenuItem, 
   DropdownMenuSeparator, 
   DropdownMenuTrigger,
-  DropdownMenuLabel
+  DropdownMenuLabel,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent
 } from '@/components/ui/dropdown-menu';
 import { UserAvatar } from '@/components/custom/UserAvatar';
 import { ModeToggle } from '@/components/custom/ModeToggle';
@@ -28,17 +33,8 @@ export function ProfileDropdown() {
   const { t } = useTranslation();
   const { color } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   if (!user) return null;
-
-  const handleSectionClick = (section: string) => {
-    if (activeSection === section) {
-      setActiveSection(null);
-    } else {
-      setActiveSection(section);
-    }
-  };
 
   return (
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
@@ -64,47 +60,43 @@ export function ProfileDropdown() {
           <span>{t('dashboard.profile')}</span>
         </DropdownMenuItem>
         
-        <div 
-          className="px-2 py-1.5 cursor-pointer flex items-center hover:bg-accent hover:text-accent-foreground rounded-sm"
-          onClick={() => handleSectionClick('language')}
-        >
-          <Languages className="mr-2 h-4 w-4 text-primary" />
-          <span>{t('settings.language')}</span>
-        </div>
-        
-        {activeSection === 'language' && (
-          <div className="px-2 py-1.5">
-            <LanguageSelector asIcon={false} />
-          </div>
-        )}
-        
-        <div 
-          className="px-2 py-1.5 cursor-pointer flex items-center hover:bg-accent hover:text-accent-foreground rounded-sm"
-          onClick={() => handleSectionClick('theme-mode')}
-        >
-          <SunMoon className="mr-2 h-4 w-4 text-primary" />
-          <span>{t('settings.themeMode')}</span>
-        </div>
-        
-        {activeSection === 'theme-mode' && (
-          <div className="px-2 py-1.5">
-            <ModeToggle />
-          </div>
-        )}
-        
-        <div 
-          className="px-2 py-1.5 cursor-pointer flex items-center hover:bg-accent hover:text-accent-foreground rounded-sm"
-          onClick={() => handleSectionClick('color-theme')}
-        >
-          <Palette className="mr-2 h-4 w-4 text-primary" />
-          <span>{t('settings.colorTheme')}</span>
-        </div>
-        
-        {activeSection === 'color-theme' && (
-          <div className="px-2 py-1.5">
-            <ThemeSelector />
-          </div>
-        )}
+        <DropdownMenuSub>
+          <DropdownMenuSubTrigger className="cursor-pointer">
+            <Settings className="mr-2 h-4 w-4 text-primary" />
+            <span>{t('settings.title')}</span>
+          </DropdownMenuSubTrigger>
+          <DropdownMenuSubContent className="w-56">
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger className="cursor-pointer">
+                <Languages className="mr-2 h-4 w-4 text-primary" />
+                <span>{t('settings.language')}</span>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent className="p-2">
+                <LanguageSelector asIcon={false} />
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
+            
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger className="cursor-pointer">
+                <SunMoon className="mr-2 h-4 w-4 text-primary" />
+                <span>{t('settings.themeMode')}</span>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent className="p-2">
+                <ModeToggle />
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
+            
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger className="cursor-pointer">
+                <Palette className="mr-2 h-4 w-4 text-primary" />
+                <span>{t('settings.colorTheme')}</span>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent className="p-2">
+                <ThemeSelector />
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
+          </DropdownMenuSubContent>
+        </DropdownMenuSub>
         
         <DropdownMenuSeparator />
         
