@@ -35,10 +35,10 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <div className="absolute top-4 right-4 flex gap-2">
-        <LanguageSelector asIcon />
-        <ModeToggle />
-        <ThemeSelector />
+      <div className="absolute top-4 right-4 flex items-center gap-1">
+        <LanguageSelector asIcon={true} />
+        <ModeToggle asIcon={true} />
+        <ThemeSelector asIcon={true} />
       </div>
       
       <div className="flex flex-1 items-center justify-center p-4">
