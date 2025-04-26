@@ -5,6 +5,12 @@ import { Languages } from 'lucide-react';
 import { 
   Button 
 } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/contexts/ThemeContext';
 
@@ -26,6 +32,33 @@ export function LanguageSelector({ asIcon = false }: { asIcon?: boolean }) {
   ];
   
   const currentLanguage = languages.find(lang => lang.value === language) || languages[0];
+
+  if (asIcon) {
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full">
+            <span className="text-base">{currentLanguage.flag}</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          {languages.map((lang) => (
+            <DropdownMenuItem
+              key={lang.value}
+              onClick={() => setLanguage(lang.value)}
+              className="flex items-center gap-2 cursor-pointer"
+            >
+              <span>{lang.flag}</span>
+              <span>{lang.nativeLabel}</span>
+              {lang.value === language && (
+                <span className="ml-auto">✓</span>
+              )}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-1 w-full">

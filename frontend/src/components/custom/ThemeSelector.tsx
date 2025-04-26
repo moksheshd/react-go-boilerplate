@@ -1,8 +1,14 @@
 
 import React from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
-import { Check } from 'lucide-react';
+import { Check, Palette } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 type ColorOption = 
   | "slate" | "gray" | "zinc" | "neutral" | "stone" 
@@ -11,7 +17,7 @@ type ColorOption =
   | "blue" | "indigo" | "violet" | "purple" | "fuchsia" 
   | "pink" | "rose";
 
-export function ThemeSelector() {
+export function ThemeSelector({ asIcon = false }: { asIcon?: boolean }) {
   const { color, setColor } = useTheme();
   const { t } = useTranslation();
 
@@ -39,6 +45,37 @@ export function ThemeSelector() {
     { value: "pink", label: "Pink", className: "bg-pink-500" },
     { value: "rose", label: "Rose", className: "bg-rose-500" }
   ];
+
+  if (asIcon) {
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full">
+            <Palette className="h-5 w-5" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-56">
+          <div className="grid grid-cols-5 gap-1 p-2">
+            {colors.map((colorOption) => (
+              <div
+                key={colorOption.value}
+                className={`flex h-8 w-8 items-center justify-center rounded-full cursor-pointer ${color === colorOption.value ? "ring-2 ring-primary" : ""}`}
+                onClick={() => setColor(colorOption.value)}
+                title={colorOption.label}
+              >
+                <div 
+                  className={`flex h-6 w-6 items-center justify-center rounded-full ${colorOption.className}`}
+                >
+                  {color === colorOption.value && <Check className="h-3 w-3 text-white" />}
+                </div>
+                <span className="sr-only">{colorOption.label}</span>
+              </div>
+            ))}
+          </div>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  }
 
   return (
     <div className="grid grid-cols-3 gap-1 p-1 w-full">
